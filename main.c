@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <string.h>
+
 typedef struct {
     char nome[30];
     char cognome[30];
     char telefono[15];
+} Contatto;
 
-}Contatto;
 int Aggiungi(Contatto a[]);
 int Visualizza(Contatto a[]);
+
 int main(void) {
     Contatto rubri[20];
     int scelta = 0;
@@ -16,15 +18,15 @@ int main(void) {
     for (int i = 0; i < 20; i++) {
         strcpy(rubri[i].nome, "");
         strcpy(rubri[i].cognome, "");
-        strcpy(rubri[i].telefono, "");  // strcpy incolla in questo caso in rubri in quella posizione la ""
+        strcpy(rubri[i].telefono, "");
     }
 
     while (scelta != 5) {
         printf("\n RUBRICA \n");
         printf("1. Aggiungi contatto\n");
         printf("2. Visualizza rubrica\n");
-        printf("3. Ricerca per cognome \n");
-        printf("4. Elimina contatto \n");
+        printf("3. Ricerca per cognome\n");
+        printf("4. Elimina contatto\n");
         printf("5. Esci\n");
         printf("Scelta: ");
         scanf("%d", &scelta);
@@ -39,41 +41,41 @@ int main(void) {
             printf("Lavori in corso\n");
         }
     }
-        printf("Uscita dal programma...\n");
-        return 0;
 
+    printf("esc\n");
     return 0;
 }
+
 int Aggiungi(Contatto a[]) {
-    int n=-1;
-    for (int i = 0; i<20; i++) {
-        if ((strcmp(a[i].nome, "-\0") == 0) && (strcmp(a[i].cognome, "-\0") == 0 )&&
-        strcmp(a[i].telefono, "-\0") == 0) {
-
-           n= i;
+    int n = -1;
+    for (int i = 0; i < 20; i++) {
+        if ((strcmp(a[i].nome, "") == 0) &&
+            (strcmp(a[i].cognome, "") == 0) &&
+            (strcmp(a[i].telefono, "") == 0)) {
+            n = i;
             break;
-            }
+        }
     }
+
     if (n == -1) {
-        printf("Rubrica piena \n");
-    }else {
+        printf("Rubrica piena\n");
+    } else {
+        printf("Inserisci nome: ");
         scanf("%s", a[n].nome);
+        printf("Inserisci cognome: ");
         scanf("%s", a[n].cognome);
+        printf("Inserisci telefono: ");
         scanf("%s", a[n].telefono);
-
-    }
-
-
-}
-int Visualizza(Contatto a[]) {
-    for ( int i = 0; i<20; i++) {
-        if (a[i].nome!="\0")
-        printf("Nome: %s", a[i].nome);
-        printf("Cognome: %s", a[i].cognome);
-        printf("Telefono: %s", a[i].telefono);
     }
     return 0;
 }
 
-
-
+int Visualizza(Contatto a[]) {
+    for (int i = 0; i < 20; i++) {
+        if (a[i].nome[0] != '\0') {
+            printf("Nome : %s\n",a[i].nome);
+            printf("Cognome : %s\n",a[i].cognome);
+            printf("Telefono : %s\n\n",a[i].telefono);
+          }}
+    return 0;
+}
