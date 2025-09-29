@@ -9,3 +9,5 @@ funzione Aggiungi contatto dove faccio scorrere prima l'array della rubrica per 
 funzione Visualizza contatti: in questa funzione con un for faccio scorrere tutta la rubrica e nel caso non fosse vuoto stampa il contatto 
 ## quinto commit
 inizializzato il main dove c'è un ciclo while che permette di sceglire in input cosa eseguire
+## sesto commit
+push
