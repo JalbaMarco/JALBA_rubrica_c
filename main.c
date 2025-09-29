@@ -32,3 +32,15 @@ int Aggiungi(Contatto a[]) {
 
 
 }
+int Cerca(Contatto a[]) {
+    for ( int i = 0; i<20; i++) {
+        if (a[i].nome!="\0")
+        printf("Nome: %s", a[i].nome);
+        printf("Cognome: %s", a[i].cognome);
+        printf("Telefono: %s", a[i].telefono);
+    }
+    return 0;
+}
+
+
+

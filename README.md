@@ -5,3 +5,5 @@ creazione file e configurazione README
 struct del contatto con inizializzato nome,cognome e telefono
 ## terzo commit 
 funzione Aggiungi contatto dove faccio scorrere prima l'array della rubrica per vedere se c'è posto per aggiungere un conttatto, questo lo faccio con strcmp che mi confronta se in quella posizione per i tre parametri c'è spazio e se c'è si aggiunge il contatto altrimenti no
+## quarto commit
+funzione Visualizza contatti: in questa funzione con un for faccio scorrere tutta la rubrica e nel caso non fosse vuoto stampa il contattto 
